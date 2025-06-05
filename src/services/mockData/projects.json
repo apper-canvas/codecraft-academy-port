@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "My First Calculator",
+    "code": "def calculator(a, b, operation):\n    if operation == '+':\n        return a + b\n    elif operation == '-':\n        return a - b\n    elif operation == '*':\n        return a * b\n    elif operation == '/':\n        return a / b if b != 0 else 'Error: Division by zero'\n    else:\n        return 'Invalid operation'\n\n# Test the calculator\nprint(calculator(10, 5, '+'))  # 15\nprint(calculator(10, 5, '-'))  # 5\nprint(calculator(10, 5, '*'))  # 50\nprint(calculator(10, 5, '/'))  # 2.0",
+    "language": "python",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "thumbnail": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Interactive Greeting",
+    "code": "function interactiveGreeting() {\n    const name = prompt('What is your name?');\n    const age = prompt('How old are you?');\n    \n    if (name && age) {\n        const message = `Hello, ${name}! You are ${age} years old.`;\n        document.getElementById('greeting').textContent = message;\n        \n        if (age >= 18) {\n            document.getElementById('status').textContent = 'You are an adult!';\n        } else {\n            document.getElementById('status').textContent = 'You are a minor.';\n        }\n    }\n}\n\n// Call the function\ninteractiveGreeting();",
+    "language": "javascript",
+    "createdAt": "2024-01-14T15:45:00Z",
+    "thumbnail": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Password Generator",
+    "code": "import random\nimport string\n\ndef generate_password(length=8):\n    characters = string.ascii_letters + string.digits + '!@#$%^&*'\n    password = ''.join(random.choice(characters) for _ in range(length))\n    return password\n\ndef check_password_strength(password):\n    has_upper = any(c.isupper() for c in password)\n    has_lower = any(c.islower() for c in password)\n    has_digit = any(c.isdigit() for c in password)\n    has_special = any(c in '!@#$%^&*' for c in password)\n    \n    strength = sum([has_upper, has_lower, has_digit, has_special])\n    \n    if strength == 4 and len(password) >= 8:\n        return 'Strong'\n    elif strength >= 3:\n        return 'Medium'\n    else:\n        return 'Weak'\n\n# Generate and test passwords\nfor i in range(3):\n    pwd = generate_password(10)\n    strength = check_password_strength(pwd)\n    print(f'Password: {pwd} - Strength: {strength}')",
+    "language": "python",
+    "createdAt": "2024-01-13T09:20:00Z",
+    "thumbnail": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Color Palette Generator",
+    "code": "function generateRandomColor() {\n    const r = Math.floor(Math.random() * 256);\n    const g = Math.floor(Math.random() * 256);\n    const b = Math.floor(Math.random() * 256);\n    return `rgb(${r}, ${g}, ${b})`;\n}\n\nfunction createColorPalette(count = 5) {\n    const palette = [];\n    for (let i = 0; i < count; i++) {\n        palette.push(generateRandomColor());\n    }\n    return palette;\n}\n\nfunction displayPalette() {\n    const colors = createColorPalette(6);\n    const paletteDiv = document.getElementById('palette');\n    paletteDiv.innerHTML = '';\n    \n    colors.forEach((color, index) => {\n        const colorDiv = document.createElement('div');\n        colorDiv.style.backgroundColor = color;\n        colorDiv.style.width = '100px';\n        colorDiv.style.height = '100px';\n        colorDiv.style.display = 'inline-block';\n        colorDiv.style.margin = '5px';\n        colorDiv.title = color;\n        paletteDiv.appendChild(colorDiv);\n    });\n}\n\n// Generate initial palette\ndisplayPalette();\n\n// Add button to generate new palette\ndocument.getElementById('newPalette').addEventListener('click', displayPalette);",
+    "language": "javascript",
+    "createdAt": "2024-01-12T14:10:00Z",
+    "thumbnail": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 5,
+    "title": "Simple Quiz Game",
+    "code": "class QuizGame:\n    def __init__(self):\n        self.questions = [\n            {\n                'question': 'What is the capital of France?',\n                'options': ['A) London', 'B) Berlin', 'C) Paris', 'D) Madrid'],\n                'answer': 'C'\n            },\n            {\n                'question': 'Which planet is known as the Red Planet?',\n                'options': ['A) Venus', 'B) Mars', 'C) Jupiter', 'D) Saturn'],\n                'answer': 'B'\n            },\n            {\n                'question': 'What is 2 + 2?',\n                'options': ['A) 3', 'B) 4', 'C) 5', 'D) 6'],\n                'answer': 'B'\n            }\n        ]\n        self.score = 0\n    \n    def play(self):\n        print('Welcome to the Quiz Game!')\n        print('Choose the correct answer (A, B, C, or D)\\n')\n        \n        for i, q in enumerate(self.questions, 1):\n            print(f'Question {i}: {q[\"question\"]}')\n            for option in q['options']:\n                print(option)\n            \n            answer = input('Your answer: ').upper()\n            \n            if answer == q['answer']:\n                print('Correct!\\n')\n                self.score += 1\n            else:\n                print(f'Wrong! The correct answer was {q[\"answer\"]}\\n')\n        \n        print(f'Game Over! Your final score: {self.score}/{len(self.questions)}')\n        percentage = (self.score / len(self.questions)) * 100\n        print(f'Percentage: {percentage:.1f}%')\n\n# Start the game\ngame = QuizGame()\ngame.play()",
+    "language": "python",
+    "createdAt": "2024-01-11T16:30:00Z",
+    "thumbnail": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=200&fit=crop"
+  }
+]

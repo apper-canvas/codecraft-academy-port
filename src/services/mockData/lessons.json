@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "courseId": 1,
+    "title": "Introduction to Python",
+    "content": "Python is a powerful, easy-to-learn programming language. It's great for beginners because of its simple syntax and readability. In this lesson, you'll learn about variables, data types, and how to write your first Python program. Python is used everywhere - from web development to data science, artificial intelligence, and automation. Let's start your coding adventure!",
+    "codeExamples": ["# Your first Python program\nprint('Hello, CodeCraft Academy!')\n\n# Variables and data types\nname = 'Student'\nage = 15\nprint(f'Hi {name}, you are {age} years old!')"],
+    "order": 1
+  },
+  {
+    "id": 2,
+    "courseId": 1,
+    "title": "Variables and Data Types",
+    "content": "Variables are like containers that store data values. Python has several data types including strings (text), integers (whole numbers), floats (decimal numbers), and booleans (True/False). Understanding data types is crucial for writing effective programs.",
+    "codeExamples": ["# Different data types\nname = 'Alice'  # String\nage = 16        # Integer\nheight = 5.6    # Float\nis_student = True  # Boolean\n\nprint(type(name))\nprint(type(age))"],
+    "order": 2
+  },
+  {
+    "id": 3,
+    "courseId": 1,
+    "title": "Control Structures",
+    "content": "Control structures help you make decisions in your code. If-else statements allow your program to execute different code based on conditions. This is fundamental to creating intelligent programs that can respond to different situations.",
+    "codeExamples": ["# If-else statements\nage = 16\n\nif age >= 18:\n    print('You can vote!')\nelse:\n    print('You cannot vote yet.')\n\n# Multiple conditions\nif age < 13:\n    print('You are a child')\nelif age < 18:\n    print('You are a teenager')\nelse:\n    print('You are an adult')"],
+    "order": 3
+  },
+  {
+    "id": 6,
+    "courseId": 2,
+    "title": "JavaScript Basics",
+    "content": "JavaScript is the language of the web! It makes websites interactive and dynamic. You can use JavaScript to respond to user actions, modify web page content, and create amazing user experiences. Let's start with the basics of variables and functions.",
+    "codeExamples": ["// Your first JavaScript program\nconsole.log('Hello, CodeCraft Academy!');\n\n// Variables in JavaScript\nlet name = 'Student';\nconst age = 15;\nconsole.log(`Hi ${name}, you are ${age} years old!`);"],
+    "order": 1
+  },
+  {
+    "id": 7,
+    "courseId": 2,
+    "title": "Functions and Events",
+    "content": "Functions are reusable blocks of code that perform specific tasks. Events allow you to make your web pages interactive by responding to user actions like clicks, key presses, and mouse movements.",
+    "codeExamples": ["// Functions in JavaScript\nfunction greetUser(name) {\n    return `Hello, ${name}! Welcome to coding!`;\n}\n\nconsole.log(greetUser('Alice'));\n\n// Arrow function\nconst addNumbers = (a, b) => a + b;\nconsole.log(addNumbers(5, 3));"],
+    "order": 2
+  },
+  {
+    "id": 8,
+    "courseId": 2,
+    "title": "DOM Manipulation",
+    "content": "The Document Object Model (DOM) represents the structure of a web page. With JavaScript, you can modify HTML elements, change styles, and create dynamic content that responds to user interaction.",
+    "codeExamples": ["// DOM manipulation\n// Change text content\ndocument.getElementById('title').textContent = 'New Title';\n\n// Add event listener\ndocument.getElementById('button').addEventListener('click', function() {\n    alert('Button clicked!');\n});"],
+    "order": 3
+  }
+]

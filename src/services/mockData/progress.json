@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "courseId": 1,
+    "completedLessons": [1, 2],
+    "completedChallenges": [1, 2],
+    "lastAccessed": "2024-01-15T10:30:00Z",
+    "score": 85
+  },
+  {
+    "id": 2,
+    "courseId": 2,
+    "completedLessons": [6],
+    "completedChallenges": [4],
+    "lastAccessed": "2024-01-14T15:45:00Z",
+    "score": 92
+  },
+  {
+    "id": 3,
+    "courseId": 4,
+    "completedLessons": [],
+    "completedChallenges": [],
+    "lastAccessed": "2024-01-13T09:20:00Z",
+    "score": 0
+  }
+]

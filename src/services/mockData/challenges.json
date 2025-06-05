@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "lessonId": 1,
+    "title": "Hello World Challenge",
+    "description": "Write a Python program that prints 'Hello, World!' to the console. This is your first step into programming!",
+    "starterCode": "# Write your code here\n# Hint: Use the print() function\n",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "Hello, World!"
+      }
+    ],
+    "hints": [
+      "Use the print() function",
+      "Remember to use quotes around the text",
+      "The exact text should be 'Hello, World!'"
+    ],
+    "solution": "print('Hello, World!')"
+  },
+  {
+    "id": 2,
+    "lessonId": 2,
+    "title": "Variable Assignment",
+    "description": "Create variables for your name and age, then print them in a formatted message.",
+    "starterCode": "# Create variables for your information\nname = \"Your Name\"\nage = 0\n\n# Print a message using these variables\n",
+    "testCases": [
+      {
+        "input": "name='Alice', age=15",
+        "expected": "My name is Alice and I am 15 years old."
+      }
+    ],
+    "hints": [
+      "Use f-strings for formatting: f'text {variable}'",
+      "Remember to assign actual values to the variables",
+      "The message format should match exactly"
+    ],
+    "solution": "name = 'Alice'\nage = 15\nprint(f'My name is {name} and I am {age} years old.')"
+  },
+  {
+    "id": 3,
+    "lessonId": 3,
+    "title": "Age Checker",
+    "description": "Write a program that checks if someone is old enough to vote (18 or older) and prints an appropriate message.",
+    "starterCode": "# Get the age (you can use a fixed value for testing)\nage = 16\n\n# Write your if-else logic here\n",
+    "testCases": [
+      {
+        "input": "age=16",
+        "expected": "You are not old enough to vote yet."
+      },
+      {
+        "input": "age=18",
+        "expected": "You can vote!"
+      }
+    ],
+    "hints": [
+      "Use an if-else statement",
+      "Check if age >= 18",
+      "Print different messages for each case"
+    ],
+    "solution": "age = 16\nif age >= 18:\n    print('You can vote!')\nelse:\n    print('You are not old enough to vote yet.')"
+  },
+  {
+    "id": 4,
+    "lessonId": 6,
+    "title": "JavaScript Greeting",
+    "description": "Create a JavaScript function that takes a name as input and returns a personalized greeting message.",
+    "starterCode": "// Create your function here\nfunction createGreeting(name) {\n    // Your code here\n}\n\n// Test your function\nconsole.log(createGreeting('Student'));",
+    "testCases": [
+      {
+        "input": "createGreeting('Alice')",
+        "expected": "Hello, Alice! Welcome to JavaScript!"
+      }
+    ],
+    "hints": [
+      "Use template literals with backticks",
+      "Return the greeting string",
+      "The format should be: 'Hello, [name]! Welcome to JavaScript!'"
+    ],
+    "solution": "function createGreeting(name) {\n    return `Hello, ${name}! Welcome to JavaScript!`;\n}\n\nconsole.log(createGreeting('Alice'));"
+  },
+  {
+    "id": 5,
+    "lessonId": 7,
+    "title": "Calculator Function",
+    "description": "Write a JavaScript function that adds two numbers and returns the result.",
+    "starterCode": "// Create an addition function\nfunction addNumbers(a, b) {\n    // Your code here\n}\n\n// Test your function\nconsole.log(addNumbers(5, 3));",
+    "testCases": [
+      {
+        "input": "addNumbers(5, 3)",
+        "expected": "8"
+      },
+      {
+        "input": "addNumbers(10, 20)",
+        "expected": "30"
+      }
+    ],
+    "hints": [
+      "Use the + operator to add numbers",
+      "Return the result of the addition",
+      "Make sure to return, not just calculate"
+    ],
+    "solution": "function addNumbers(a, b) {\n    return a + b;\n}\n\nconsole.log(addNumbers(5, 3));"
+  },
+  {
+    "id": 6,
+    "title": "Python Loop Practice",
+    "description": "Write a Python program that prints numbers from 1 to 10 using a for loop.",
+    "starterCode": "# Write a for loop to print numbers 1 to 10\n",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+      }
+    ],
+    "hints": [
+      "Use the range() function",
+      "Remember that range(1, 11) gives 1 to 10",
+      "Use a for loop with print()"
+    ],
+    "solution": "for i in range(1, 11):\n    print(i)"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Array Fun",
+    "description": "Create a JavaScript array with 5 different fruits and print each one using a loop.",
+    "starterCode": "// Create an array of fruits\nlet fruits = [];\n\n// Loop through and print each fruit\n",
+    "testCases": [
+      {
+        "input": "",
+        "expected": "apple\nbanana\norange\ngrape\nstrawberry"
+      }
+    ],
+    "hints": [
+      "Create an array with square brackets []",
+      "Use a for loop or forEach method",
+      "Print each fruit on a new line"
+    ],
+    "solution": "let fruits = ['apple', 'banana', 'orange', 'grape', 'strawberry'];\n\nfor (let fruit of fruits) {\n    console.log(fruit);\n}"
+  },
+  {
+    "id": 8,
+    "title": "Number Guessing Logic",
+    "description": "Write a Python function that compares a guess to a secret number and returns 'too high', 'too low', or 'correct'.",
+    "starterCode": "def check_guess(secret, guess):\n    # Your logic here\n    pass\n\n# Test your function\nprint(check_guess(42, 50))",
+    "testCases": [
+      {
+        "input": "check_guess(42, 50)",
+        "expected": "too high"
+      },
+      {
+        "input": "check_guess(42, 30)",
+        "expected": "too low"
+      },
+      {
+        "input": "check_guess(42, 42)",
+        "expected": "correct"
+      }
+    ],
+    "hints": [
+      "Use if-elif-else statements",
+      "Compare guess to secret number",
+      "Return the appropriate string"
+    ],
+    "solution": "def check_guess(secret, guess):\n    if guess > secret:\n        return 'too high'\n    elif guess < secret:\n        return 'too low'\n    else:\n        return 'correct'\n\nprint(check_guess(42, 50))"
+  }
+]

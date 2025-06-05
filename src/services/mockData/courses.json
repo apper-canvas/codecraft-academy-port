@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Python Fundamentals",
+    "description": "Learn the basics of Python programming with hands-on exercises and real-world examples. Perfect for beginners who want to start their coding journey.",
+    "difficulty": "Beginner",
+    "duration": "6 weeks",
+    "language": "Python",
+    "thumbnail": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=250&fit=crop",
+    "lessons": [1, 2, 3, 4, 5]
+  },
+  {
+    "id": 2,
+    "title": "JavaScript for Beginners",
+    "description": "Master the fundamentals of JavaScript and learn to create interactive web pages. Build your first dynamic websites with modern JavaScript.",
+    "difficulty": "Beginner",
+    "duration": "8 weeks",
+    "language": "JavaScript",
+    "thumbnail": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=250&fit=crop",
+    "lessons": [6, 7, 8, 9, 10]
+  },
+  {
+    "id": 3,
+    "title": "Advanced Python",
+    "description": "Dive deep into advanced Python concepts including object-oriented programming, decorators, and data structures for experienced programmers.",
+    "difficulty": "Advanced",
+    "duration": "10 weeks",
+    "language": "Python",
+    "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop",
+    "lessons": [11, 12, 13, 14]
+  },
+  {
+    "id": 4,
+    "title": "Web Development with JavaScript",
+    "description": "Build complete web applications using modern JavaScript frameworks and libraries. Learn to create responsive and interactive websites.",
+    "difficulty": "Intermediate",
+    "duration": "12 weeks",
+    "language": "JavaScript",
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
+    "lessons": [15, 16, 17, 18, 19]
+  },
+  {
+    "id": 5,
+    "title": "Data Science with Python",
+    "description": "Explore data analysis, visualization, and machine learning using Python libraries like pandas, matplotlib, and scikit-learn.",
+    "difficulty": "Intermediate",
+    "duration": "14 weeks",
+    "language": "Python",
+    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+    "lessons": [20, 21, 22, 23]
+  },
+  {
+    "id": 6,
+    "title": "Game Development Basics",
+    "description": "Create your first games using Python and Pygame. Learn game design principles and bring your creative ideas to life.",
+    "difficulty": "Intermediate",
+    "duration": "8 weeks",
+    "language": "Python",
+    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop",
+    "lessons": [24, 25, 26, 27]
+  }
+]
