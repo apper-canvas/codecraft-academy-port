@@ -182,85 +182,85 @@ import React, { useState, useEffect } from 'react';
           );
         }
 
-        return (
-          <div className="space-y-6">
-            <AnimatePresence>
-              {showCelebration && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
-                >
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ duration: 0.6, repeat: 2 }}
-                    className="bg-white rounded-3xl p-8 text-center shadow-2xl"
-                  >
-                    <div className="text-6xl mb-4">🎉</div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Amazing work!</h3>
-                    <p className="text-gray-600">Challenge completed successfully!</p>
-                  </motion.div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+return (
+    <div className="space-y-4 sm:space-y-6 pb-20 lg:pb-0">
+      <AnimatePresence>
+        {showCelebration && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              animate={{
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{ duration: 0.6, repeat: 2 }}
+              className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 text-center shadow-2xl max-w-sm mx-auto"
+            >
+              <div className="text-4xl sm:text-6xl mb-4">🎉</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Amazing work!</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">Challenge completed successfully!</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-            {activeSection === 'courses' && !selectedCourse && (
-              <CourseCatalog
-                courses={courses}
-                userProgress={userProgress}
-                onSelectCourse={setSelectedCourse}
-                getDifficultyColor={getDifficultyColor}
-                getLanguageIcon={getLanguageIcon}
-              />
-            )}
+      {activeSection === 'courses' && !selectedCourse && (
+        <CourseCatalog
+          courses={courses}
+          userProgress={userProgress}
+          onSelectCourse={setSelectedCourse}
+          getDifficultyColor={getDifficultyColor}
+          getLanguageIcon={getLanguageIcon}
+        />
+      )}
 
-            {activeSection === 'courses' && selectedCourse && (
-              <CourseDetail
-                selectedCourse={selectedCourse}
-                lessons={lessons}
-                selectedLesson={selectedLesson}
-                setSelectedCourse={setSelectedCourse}
-                setSelectedLesson={setSelectedLesson}
-                codeEditorContent={codeEditorContent}
-                setCodeEditorContent={setCodeEditorContent}
-                codeOutput={codeOutput}
-                codeLanguage={codeLanguage}
-                setCodeLanguage={setCodeLanguage}
-                isRunning={isRunning}
-                onRunCode={runCode}
-                getDifficultyColor={getDifficultyColor}
-              />
-            )}
+      {activeSection === 'courses' && selectedCourse && (
+        <CourseDetail
+          selectedCourse={selectedCourse}
+          lessons={lessons}
+          selectedLesson={selectedLesson}
+          setSelectedCourse={setSelectedCourse}
+          setSelectedLesson={setSelectedLesson}
+          codeEditorContent={codeEditorContent}
+          setCodeEditorContent={setCodeEditorContent}
+          codeOutput={codeOutput}
+          codeLanguage={codeLanguage}
+          setCodeLanguage={setCodeLanguage}
+          isRunning={isRunning}
+          onRunCode={runCode}
+          getDifficultyColor={getDifficultyColor}
+        />
+      )}
 
-            {activeSection === 'challenges' && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <ChallengeList
-                  challenges={challenges}
-                  selectedChallenge={selectedChallenge}
-                  onSelectChallenge={(challenge) => {
-                    setSelectedChallenge(challenge);
-                    setCodeEditorContent(challenge.starterCode || '# Start coding here...\n');
-                  }}
-                />
-                <ChallengeDetail
-                  selectedChallenge={selectedChallenge}
-                  codeEditorContent={codeEditorContent}
-                  setCodeEditorContent={setCodeEditorContent}
-                  isRunning={isRunning}
-                  onSubmitChallenge={submitChallenge}
-                />
-              </div>
-            )}
+      {activeSection === 'challenges' && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+          <ChallengeList
+            challenges={challenges}
+            selectedChallenge={selectedChallenge}
+            onSelectChallenge={(challenge) => {
+              setSelectedChallenge(challenge);
+              setCodeEditorContent(challenge.starterCode || '# Start coding here...\n');
+            }}
+          />
+          <ChallengeDetail
+            selectedChallenge={selectedChallenge}
+            codeEditorContent={codeEditorContent}
+            setCodeEditorContent={setCodeEditorContent}
+            isRunning={isRunning}
+            onSubmitChallenge={submitChallenge}
+          />
+        </div>
+      )}
 
-            {comingSoonSections.includes(activeSection) && (
-              <FeatureDisplay activeSection={activeSection} />
-            )}
-          </div>
-        );
-      }
+      {comingSoonSections.includes(activeSection) && (
+        <FeatureDisplay activeSection={activeSection} />
+      )}
+    </div>
+  );
+}
 
       export default MainContentArea;
